@@ -50,6 +50,7 @@ while contador ==1:
             almacen = pd.read_csv("AlmacenVentas.csv", index_col=0)
             consulta = input("¿Cuál es la fecha de venta que quieres consultar? Escribe la fecha con el siguiente formato: yyyy-mm-dd:\n ")
             subconjunto = almacen[almacen.Fecha == consulta]
+            print(f"Estas son las ventas en: {consulta}")
             print(subconjunto)
             print("Si no aparece nada quiere decir que no hay ventas en esa fecha sigue intentando con otra fecha")
         except Exception:
