@@ -25,7 +25,7 @@ while contador ==1:
             lista_fecha.append(fecha_v)
             precios_totales.append((cantidad_prd) * (precio_prd))
             total_venta = sum(precios_totales)
-        ventas = {"Nombre":(lista_nombre), "Cantidad de productos":(lista_cantidad), "Precio":(lista_precios), "Fecha de venta":(lista_fecha)}
+        ventas = {"Nombre":(lista_nombre), "Cantidad de productos":(lista_cantidad), "Precio":(lista_precios), "Fecha":(lista_fecha)}
         ventas_dt = pd.DataFrame(ventas)
         print(ventas_dt)
         print(f"El total a pagar es el siguiente: {total_venta}")
