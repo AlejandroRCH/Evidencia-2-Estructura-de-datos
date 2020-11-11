@@ -1,8 +1,16 @@
 contador = 1
+import pandas as pd
+import datetime
+lista_fecha = []
+lista_nombre = []
+lista_cantidad = []
+lista_precios = []
+precios_totales = []
+
 
 while contador ==1:
     
-    eleccion = int(input("Que accion deseas realizar?\n 1.Registrar una venta\n  2.Consultar ventas de un dia en especifico\n  3.Salir\n"))
+    eleccion = int(input("Que accion deseas realizar?\n 1.Registrar una venta\n 2.Consultar ventas de un dia en especifico\n 3.Salir\n"))
     
     if eleccion == 1:
         pass
