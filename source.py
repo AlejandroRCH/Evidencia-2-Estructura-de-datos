@@ -28,6 +28,9 @@ while contador ==1:
         ventas = {"Nombre":(lista_nombre), "Cantidad de productos":(lista_cantidad), "Precio":(lista_precios), "Fecha de venta":(lista_fecha)}
         ventas_dt = pd.DataFrame(ventas)
         print(ventas_dt)
+        print(f"El total a pagar es el siguiente: {total_venta}")
+        ventas_dt.to_csv (r"AlmacenVentas.csv",index=False, header=True)
+        print("exportado correctamente")
 
     
     
