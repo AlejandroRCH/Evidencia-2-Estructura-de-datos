@@ -14,7 +14,8 @@ while contador ==1:
     eleccion = int(input("Que accion deseas realizar?\n 1.Registrar una venta\n 2.Consultar ventas de un dia en especifico\n 3.Salir\n"))
     
     if eleccion == 1:
-        cant = int(input("Cuantas ventas quieres registrar?"))
+        print("----BIENVENIDO A LA JOYERIA LOS PANAS----")
+        cant = int(input("Cuantas ventas quieres registrar?\n"))
         for i in range(cant):
             nombre_prd = input("Nombre de producto\n")
             lista_nombre.append(nombre_prd)
@@ -47,7 +48,7 @@ while contador ==1:
     if eleccion == 2:
         try:
             almacen = pd.read_csv("AlmacenVentas.csv", index_col=0)
-            consulta = input("¿Cuál es la fecha de venta que quieres consultar? Escribe la fecha con el siguiente formato: yyyy-mm-dd: ")
+            consulta = input("¿Cuál es la fecha de venta que quieres consultar? Escribe la fecha con el siguiente formato: yyyy-mm-dd:\n ")
             subconjunto = almacen[almacen.Fecha == consulta]
             print(subconjunto)
             print("Si no aparece nada quiere decir que no hay ventas en esa fecha sigue intentando con otra fecha")
