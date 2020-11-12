@@ -51,5 +51,6 @@ while contador ==1:
     
     
     if eleccion == 3:
-        
+
+        print("Vuelva pronto :D")
         contador = 2
