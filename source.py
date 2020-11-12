@@ -1,6 +1,7 @@
 contador = 1
 import pandas as pd
 import datetime
+import sys
 lista_fecha = []
 lista_nombre = []
 lista_cantidad = []
@@ -25,13 +26,15 @@ while contador ==1:
             lista_fecha.append(fecha_v)
             precios_totales.append((cantidad_prd) * (precio_prd))
             total_venta = sum(precios_totales)
-        ventas = {"Nombre":(lista_nombre), "Cantidad de productos":(lista_cantidad), "Precio":(lista_precios), "Fecha":(lista_fecha)}
-        ventas_dt = pd.DataFrame(ventas)
-        print(ventas_dt)
-        print(f"El total a pagar es el siguiente: {total_venta}")
-        ventas_dt.to_csv (r"AlmacenVentas.csv",index=False, header=True)
-        print("exportado correctamente")
-
+        try:
+            ventas = {"Nombre":(lista_nombre), "Cantidad de productos":(lista_cantidad), "Precio":(lista_precios), "Fecha":(lista_fecha)}
+            ventas_dt = pd.DataFrame(ventas)
+            print(ventas_dt)
+            print(f"El total a pagar es el siguiente: {total_venta}")
+            ventas_dt.to_csv (r"AlmacenVentas.csv",index=False, header=True)
+            print("exportado correctamente")
+        except Exception:
+            print(f"Ocurrio el siguiente error {sys.exc_info()[0]}")
     
     
     
